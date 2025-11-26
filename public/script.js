@@ -15,7 +15,7 @@ async function solvePuzzle() {
   const goal  = document.getElementById("goal").value.split(" ").map(Number);
   const algorithm = document.getElementById("algorithm").value;
 
-  const result = await fetch("/solve", {
+  const result = await fetch("https://ai-search-simulator.onrender.com/solve", {
     method: "POST",
     headers: { "Content-Type": "application/json"},
     body: JSON.stringify({ start, goal, algorithm })
